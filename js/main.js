@@ -4,8 +4,10 @@ setTimeout(() => {
 }, 2000);
 setTimeout(() => {
   document.querySelector(".loading").style.opacity = "0";
-}, 6500);
-
+}, 5900);
+setTimeout(() => {
+  document.querySelector(".loading").remove();
+}, 6000);
 // header
 const linksBtn = document.querySelector("header .container .nav-icon");
 const navSpans = document.querySelectorAll("header .container .nav-icon span");
@@ -23,3 +25,9 @@ linksBtn.addEventListener("click", () => {
     });
   }
 });
+
+// landing
+setTimeout(() => {
+  document.querySelector(".landing h1").classList.remove("hidden");
+  document.querySelector(".landing p").classList.remove("hidden");
+}, 6800);
