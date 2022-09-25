@@ -25,9 +25,25 @@ linksBtn.addEventListener("click", () => {
     });
   }
 });
+document.querySelectorAll("nav ul li a").forEach((a) => {
+  a.addEventListener("click", () => {
+    nav.classList.remove("show");
+    navSpans.forEach((e) => {
+      e.classList.remove("clicked");
+    });
+  });
+});
 
 // landing
 setTimeout(() => {
   document.querySelector(".landing h1").classList.remove("hidden");
   document.querySelector(".landing p").classList.remove("hidden");
 }, 6800);
+
+// window.addEventListener("scroll", () => {
+//   document.querySelectorAll(".hidden").forEach((e) => {
+//     if (window.scrollY >= e.offsetTop - 200) {
+//       e.classList.remove("hidden");
+//     }
+//   });
+// });

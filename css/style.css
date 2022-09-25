@@ -8,6 +8,7 @@
   --main-color: #0c63a7;
   --text-color: #9e9e9e;
   --title-color: white;
+  --section-padding: 150px;
 }
 * {
   box-sizing: border-box;
@@ -75,9 +76,27 @@ button {
 }
 h2.main-title {
   text-align: center;
-  letter-spacing: 5px;
-  margin: 20px 0;
+  letter-spacing: 4px;
   font-size: 60px;
+  margin: 0;
+  font-weight: 100;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  color: var(--title-color);
+}
+@media (max-width: 767px) {
+  h2.main-title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 575px) {
+  h2.main-title {
+    font-size: 40px;
+  }
 }
 /* end global rules */
 /* loading animation */
@@ -357,7 +376,17 @@ header {
   background-color: transparent;
   height: 50px;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  header {
+    background-color: var(--bg-color);
+  }
 }
 header .container {
   display: flex;
@@ -421,6 +450,7 @@ nav {
   -moz-transition: 1s ease-in-out;
   -ms-transition: 1s ease-in-out;
   -o-transition: 1s ease-in-out;
+  z-index: 2;
 }
 nav.show {
   left: 0;
@@ -545,5 +575,112 @@ nav ul li:hover::after {
 /* about */
 .about {
   background-color: var(--bg-color);
+  padding: var(--section-padding) 0;
+  color: var(--text-color);
+}
+.about .container p.quto {
+  color: var(--title-color);
+  font-size: 25px;
+  font-weight: 200;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.about .container p.quto:hover {
+  color: var(--main-color);
+}
+.about .container p.quto svg {
+  color: var(--main-color);
+  width: 15px;
+}
+.about .container .content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 60px;
+}
+@media (max-width: 767px) {
+  .about .container .content {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+.about .container .content .image {
+  flex-grow: 1;
+  margin: 0 50px;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .about .container .content .image {
+    margin: 0;
+  }
+}
+.about .container .content .image::before {
+  content: "";
+  position: absolute;
+  border: 3px solid var(--main-color);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  bottom: -20px;
+  right: -20px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.about .container .content .image img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+.about .container .content .image .blue {
+  background-color: #0c63a78c;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.about .container .content .image:hover .blue {
+  background-color: transparent;
+}
+.about .container .content .image:hover::before {
+  transform: translate(-10px, -10px);
+  -webkit-transform: translate(-10px, -10px);
+  -moz-transform: translate(-10px, -10px);
+  -ms-transform: translate(-10px, -10px);
+  -o-transform: translate(-10px, -10px);
+}
+.about .container .content .text p {
+  line-height: 30px;
+  font-size: 18px;
+  margin: 5px 0;
+}
+.about .container .content .text p span {
+  color: var(--main-color);
 }
 /* end about */
