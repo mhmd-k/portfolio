@@ -12,11 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Mohammad Alkayyali Portfolio</title>
+    <title>Mohammad Alkayyali's Portfolio</title>
+    <link
+      rel="icon"
+      href="images/logo-fococlipping-standard.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <!-- loading animation -->
-    <!-- <div class="loading">
+    <div class="loading">
       <div class="circle">
         <div class="logo">
           <div></div>
@@ -27,15 +32,19 @@
           <div></div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- end loading animation -->
     <!-- header -->
     <header>
       <div class="container">
         <div class="logo">
-          <a href="#home"><img src="images/logo.png" alt="logo image" /></a>
+          <a href="#home"
+            ><img src="images/logo-fococlipping-standard.png" alt="logo image"
+          /></a>
         </div>
-        <div class="nav-icon"><span></span><span></span><span></span></div>
+        <div class="nav-icon animated">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </header>
     <nav>
@@ -49,29 +58,11 @@
       </div>
     </nav>
     <!-- end header -->
-    <!-- social media -->
-    <div class="social">
-      <a href="https://github.com/mhmd-k" target="_blank"
-        ><i class="fa-brands fa-github"></i
-      ></a>
-      <a href="www.linkedin.com/in/mhmd-k-ll" target="_blank"
-        ><i class="fa-brands fa-linkedin"></i
-      ></a>
-      <a
-        href="https://www.facebook.com/profile.php?id=100010317153081"
-        target="_blank"
-        ><i class="fa-brands fa-square-facebook"></i
-      ></a>
-      <a href="mailto:mhmdk425@gmail.com" target="_blank"
-        ><i class="fa-regular fa-envelope"></i
-      ></a>
-    </div>
-    <!-- end social media -->
     <!-- landing -->
     <div class="landing" id="home">
       <div class="container">
-        <h1 class="hidden">Mohammad Alkayyali</h1>
-        <p class="hidden">Front-end Web Developer</p>
+        <h1 class="animated">Mohammad Alkayyali</h1>
+        <p class="animated">Front-end Web Developer</p>
       </div>
     </div>
     <!-- end landing -->
@@ -96,6 +87,7 @@
               cross browser development, Alose I have a good understanding of
               <span>API</span> and <span>JSON</span>.
             </p>
+            <p>I am currently learning <span>React.js</span>.</p>
             <h3>My Skills:</h3>
             <div class="skills">
               <ul>
@@ -110,12 +102,9 @@
             </div>
             <div class="resume">
               <button>
-                <a href="resume/cv.pdf" class="download" download
+                <a href="resume.pdf" class="download" download
                   >Resume <i class="fa-solid fa-download"></i
                 ></a>
-              </button>
-              <button>
-                <a href="resume/resume.html" target="_blank">View Resume </a>
               </button>
             </div>
           </div>
@@ -127,19 +116,19 @@
     </div>
     <!-- end about me -->
     <!-- projects -->
-    <div class="projects">
+    <div class="projects" id="projects">
       <div class="container">
-        <h2 class="main-title">PROJECTS</h2>
-        <p class="quto">
+        <h2 class="main-title hidden">PROJECTS</h2>
+        <p class="quto hidden">
           <i class="fa-solid fa-quote-left"></i> If you can't excel with talent,
           triumph with effort <i class="fa-solid fa-quote-right"></i>
         </p>
-        <ul class="filter">
+        <ul class="filter hidden">
           <li data-filter="all" class="active">All</li>
           <li data-filter="js-apps">JS Apps</li>
           <li data-filter="bootstrap">Bootstrap</li>
         </ul>
-        <div class="content">
+        <div class="content hidden">
           <div class="box">
             <a href="https://mhmd-k.github.io/Kasper/" target="_blank"
               ><div class="image">
@@ -232,18 +221,64 @@
               </div></a
             >
           </div>
-          <div class="box">
-            <a href="https://mhmd-k.github.io/Kasper/" target="_blank"
-              ><div class="image">
-                <img src="images/kasper.png" alt="" />
-                <h4>Kasper</h4>
-              </div></a
-            >
-          </div>
         </div>
       </div>
     </div>
     <!-- end projects -->
+    <!-- contact -->
+    <div class="social animated">
+      <a href="https://github.com/mhmd-k" target="_blank"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a href="www.linkedin.com/in/mhmd-k-ll" target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a
+        href="https://www.facebook.com/profile.php?id=100010317153081"
+        target="_blank"
+        ><i class="fa-brands fa-square-facebook"></i
+      ></a>
+      <a href="mailto:mhmdk425@gmail.com" target="_blank"
+        ><i class="fa-regular fa-envelope"></i
+      ></a>
+      <a href="https://wa.me/00963937741680" target="_blank"
+        ><i class="fa-brands fa-whatsapp"></i
+      ></a>
+    </div>
+    <div class="contact" id="contact">
+      <div class="container">
+        <h2 class="main-title">CONTACT</h2>
+        <p>Help me land my first Job</p>
+        <button><a href="mailto:mhmdk425@gmail.com">Mail Me</a></button>
+      </div>
+    </div>
+    <!-- end contact -->
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="social-footer">
+          <a href="https://github.com/mhmd-k" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="www.linkedin.com/in/mhmd-k-ll" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100010317153081"
+            target="_blank"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="mailto:mhmdk425@gmail.com" target="_blank"
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+          <a href="https://wa.me/00963937741680" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </div>
+        <p>Built by <span>Mohammad Alkayyali</span></p>
+      </div>
+    </footer>
+    <!-- footer -->
     <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
   </body>

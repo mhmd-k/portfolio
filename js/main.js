@@ -1,13 +1,21 @@
 // loading animation
-setTimeout(() => {
-  document.querySelector(".logo").style.display = "flex";
-}, 2000);
-setTimeout(() => {
-  document.querySelector(".loading").style.opacity = "0";
-}, 5900);
-setTimeout(() => {
-  document.querySelector(".loading").remove();
-}, 6000);
+window.addEventListener("load", () => {
+  window.scrollTo("0", "0");
+  setTimeout(() => {
+    document.querySelector(".logo").style.display = "flex";
+  }, 2000);
+  setTimeout(() => {
+    document.querySelector(".loading").style.opacity = "0";
+  }, 4900);
+  setTimeout(() => {
+    document.querySelector(".loading").remove();
+  }, 5000);
+  setTimeout(() => {
+    document.querySelectorAll(".animated").forEach((e) => {
+      e.classList.remove("animated");
+    });
+  }, 5600);
+});
 // header
 const linksBtn = document.querySelector("header .container .nav-icon");
 const navSpans = document.querySelectorAll("header .container .nav-icon span");
@@ -41,14 +49,10 @@ document.querySelector("header .logo a").addEventListener("click", () => {
 });
 
 // landing
-setTimeout(() => {
-  document.querySelector(".landing h1").classList.remove("hidden");
-  document.querySelector(".landing p").classList.remove("hidden");
-}, 6800);
-
+let scrollHiddenElements = document.querySelectorAll(".hidden");
 window.addEventListener("scroll", () => {
-  document.querySelectorAll(".hidden").forEach((e) => {
-    if (window.scrollY >= e.offsetTop - 200) {
+  scrollHiddenElements.forEach((e) => {
+    if (window.scrollY >= e.offsetTop - 300) {
       e.classList.remove("hidden");
     }
   });
