@@ -33,6 +33,12 @@ document.querySelectorAll("nav ul li a").forEach((a) => {
     });
   });
 });
+document.querySelector("header .logo a").addEventListener("click", () => {
+  nav.classList.remove("show");
+  navSpans.forEach((e) => {
+    e.classList.remove("clicked");
+  });
+});
 
 // landing
 setTimeout(() => {
@@ -40,10 +46,33 @@ setTimeout(() => {
   document.querySelector(".landing p").classList.remove("hidden");
 }, 6800);
 
-// window.addEventListener("scroll", () => {
-//   document.querySelectorAll(".hidden").forEach((e) => {
-//     if (window.scrollY >= e.offsetTop - 200) {
-//       e.classList.remove("hidden");
-//     }
-//   });
-// });
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".hidden").forEach((e) => {
+    if (window.scrollY >= e.offsetTop - 200) {
+      e.classList.remove("hidden");
+    }
+  });
+});
+
+// projects
+const ProjectsBtns = document.querySelectorAll(".projects ul.filter li");
+const boxes = document.querySelectorAll(".projects .box");
+ProjectsBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    ProjectsBtns.forEach((e) => {
+      e.classList.remove("active");
+    });
+    btn.classList.add("active");
+    for (let i = 0; i < boxes.length; i++) {
+      if (btn.getAttribute("data-filter") === "all") {
+        boxes[i].classList.remove("hide");
+      } else if (
+        btn.getAttribute("data-filter") === boxes[i].getAttribute("data-filter")
+      ) {
+        boxes[i].classList.remove("hide");
+      } else {
+        boxes[i].classList.add("hide");
+      }
+    }
+  });
+});
