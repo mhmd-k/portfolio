@@ -22,15 +22,14 @@
   <body>
     <!-- loading animation -->
     <div class="loading">
-      <div class="circle">
-        <div class="logo">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+      <div class="circle"></div>
+      <div class="logo">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
     <!-- end loading animation -->
@@ -38,7 +37,7 @@
     <header>
       <div class="container">
         <div class="logo">
-          <a href="#home"
+          <a href="#home" title="logo"
             ><img src="images/logo-fococlipping-standard.png" alt="logo image"
           /></a>
         </div>
@@ -54,6 +53,11 @@
           <li><a href="#about">ABOUT ME</a></li>
           <li><a href="#projects">PROJECTS</a></li>
           <li><a href="#contact">CONTACT</a></li>
+          <li class="dark-mode">
+            <a href="" title="light-mode" id="dark-mode"
+              ><i class="fa-solid fa-sun"></i
+            ></a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -227,21 +231,22 @@
     <!-- end projects -->
     <!-- contact -->
     <div class="social animated">
-      <a href="https://github.com/mhmd-k" target="_blank"
+      <a href="https://github.com/mhmd-k" target="_blank" title="github"
         ><i class="fa-brands fa-github"></i
       ></a>
-      <a href="www.linkedin.com/in/mhmd-k-ll" target="_blank"
+      <a href="www.linkedin.com/in/mhmd-k-ll" target="_blank" title="linkedin"
         ><i class="fa-brands fa-linkedin"></i
       ></a>
       <a
         href="https://www.facebook.com/profile.php?id=100010317153081"
         target="_blank"
+        title="facebook"
         ><i class="fa-brands fa-square-facebook"></i
       ></a>
-      <a href="mailto:mhmdk425@gmail.com" target="_blank"
+      <a href="mailto:mhmdk425@gmail.com" target="_blank" title="mail"
         ><i class="fa-regular fa-envelope"></i
       ></a>
-      <a href="https://wa.me/00963937741680" target="_blank"
+      <a href="https://wa.me/00963937741680" target="_blank" title="whatsapp"
         ><i class="fa-brands fa-whatsapp"></i
       ></a>
     </div>
@@ -257,21 +262,28 @@
     <footer>
       <div class="container">
         <div class="social-footer">
-          <a href="https://github.com/mhmd-k" target="_blank"
+          <a href="https://github.com/mhmd-k" target="_blank" title="github"
             ><i class="fa-brands fa-github"></i
           ></a>
-          <a href="www.linkedin.com/in/mhmd-k-ll" target="_blank"
+          <a
+            href="www.linkedin.com/in/mhmd-k-ll"
+            target="_blank"
+            title="linkedin"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
           <a
             href="https://www.facebook.com/profile.php?id=100010317153081"
             target="_blank"
+            title="facebook"
             ><i class="fa-brands fa-square-facebook"></i
           ></a>
-          <a href="mailto:mhmdk425@gmail.com" target="_blank"
+          <a href="mailto:mhmdk425@gmail.com" target="_blank" title="mail"
             ><i class="fa-regular fa-envelope"></i
           ></a>
-          <a href="https://wa.me/00963937741680" target="_blank"
+          <a
+            href="https://wa.me/00963937741680"
+            target="_blank"
+            title="whatsapp"
             ><i class="fa-brands fa-whatsapp"></i
           ></a>
         </div>
@@ -279,6 +291,11 @@
       </div>
     </footer>
     <!-- footer -->
+    <!-- dark mode button -->
+    <button id="dark-mode" class="animated" title="light-mode">
+      <i class="fa-solid fa-sun"></i>
+    </button>
+    <!-- end dark mode button -->
     <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
   </body>

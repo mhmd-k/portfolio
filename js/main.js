@@ -15,6 +15,17 @@ window.addEventListener("load", () => {
       e.classList.remove("animated");
     });
   }, 5600);
+  if (window.localStorage.getItem("dark-mode") === "light") {
+    darkModeBtn.forEach((e) => {
+      e.setAttribute("title", "light-mode");
+      darkMode(e);
+    });
+  } else {
+    darkModeBtn.forEach((e) => {
+      e.setAttribute("title", "dark-mode");
+      darkMode(e);
+    });
+  }
 });
 // header
 const linksBtn = document.querySelector("header .container .nav-icon");
@@ -80,3 +91,39 @@ ProjectsBtns.forEach((btn) => {
     }
   });
 });
+
+//  dark mode button
+const darkModeBtn = document.querySelectorAll("#dark-mode");
+darkModeBtn.forEach((btn) => {
+  btn.addEventListener("click", (link) => {
+    link.preventDefault();
+    darkMode(btn);
+  });
+});
+function darkMode(e) {
+  if (e.getAttribute("title") === "light-mode") {
+    darkModeBtn.forEach((btn) => {
+      btn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+      btn.setAttribute("title", "dark-mode");
+    });
+    document.documentElement.style.setProperty("--bg-color", "white");
+    document.documentElement.style.setProperty("--title-color", "#202020");
+    document.documentElement.style.setProperty("--text-color", "#575f64");
+    localStorage.setItem("dark-mode", "light");
+    document
+      .querySelector("header .logo a img")
+      .setAttribute("src", "images/dark-logo-fococlipping-standard.png");
+  } else {
+    darkModeBtn.forEach((btn) => {
+      btn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+      btn.setAttribute("title", "light-mode");
+    });
+    document.documentElement.style.setProperty("--bg-color", "#202020");
+    document.documentElement.style.setProperty("--title-color", "white");
+    document.documentElement.style.setProperty("--text-color", "#9e9e9e");
+    localStorage.setItem("dark-mode", "dark");
+    document
+      .querySelector("header .logo a img")
+      .setAttribute("src", "images/logo-fococlipping-standard.png");
+  }
+}
