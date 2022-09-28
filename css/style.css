@@ -482,6 +482,7 @@ nav ul li:hover::after {
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
   color: var(--title-color);
+  letter-spacing: 5px;
 }
 .landing p {
   font-size: 50px;
@@ -506,12 +507,12 @@ nav ul li:hover::after {
 }
 @media (max-width: 767px) {
   .landing h1 {
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 @media (max-width: 575px) {
   .landing h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
   .landing p {
     font-size: 30px;
@@ -540,8 +541,10 @@ p.quto {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
-  font-family: "VALENCIA";
-  letter-spacing: 7px;
+  font-family: Valencia;
+  letter-spacing: 5px;
+  line-height: 40px;
+  word-spacing: 2px;
 }
 p.quto:hover {
   color: var(--main-color);
