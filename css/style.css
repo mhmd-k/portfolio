@@ -3,6 +3,10 @@
   font-family: Valencia;
   src: url(../Valencia\ 400.ttf);
 }
+@font-face {
+  font-family: Adventure await;
+  src: url(../ADVENTURE\ AWAIT.ttf);
+}
 :root {
   --bg-color: #202020;
   --main-color: #0c63a7;
@@ -151,7 +155,7 @@ h2.main-title {
     height: 20px;
     opacity: 0;
   }
-  10% {
+  15% {
     width: 20px;
     height: 20px;
     opacity: 1;
@@ -162,8 +166,8 @@ h2.main-title {
     opacity: 1;
   }
   100% {
-    width: 2000px;
-    height: 2000px;
+    width: 3000px;
+    height: 3000px;
     opacity: 1;
   }
 }
@@ -472,9 +476,9 @@ nav ul li:hover::after {
   height: 100vh;
 }
 .landing h1 {
-  font-family: Valencia;
-  font-size: 100px;
-  font-weight: lighter;
+  font-style: italic;
+  font-size: 65px;
+  font-weight: 300;
   margin: 25px 0;
   transition: var(--transition);
   -webkit-transition: var(--transition);
@@ -482,10 +486,10 @@ nav ul li:hover::after {
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
   color: var(--title-color);
-  letter-spacing: 5px;
+  letter-spacing: 1px;
 }
 .landing p {
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 100;
   color: var(--text-color);
   margin: 0;
@@ -507,12 +511,12 @@ nav ul li:hover::after {
 }
 @media (max-width: 767px) {
   .landing h1 {
-    font-size: 60px;
+    font-size: 45px;
   }
 }
 @media (max-width: 575px) {
   .landing h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .landing p {
     font-size: 30px;
@@ -528,7 +532,7 @@ nav ul li:hover::after {
 p.quto {
   color: var(--title-color);
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
   display: flex;
   align-items: flex-start;
@@ -541,10 +545,8 @@ p.quto {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
-  font-family: Valencia;
-  letter-spacing: 5px;
-  line-height: 40px;
-  word-spacing: 2px;
+  font-style: italic;
+  letter-spacing: 3px;
 }
 p.quto:hover {
   color: var(--main-color);
@@ -1069,7 +1071,7 @@ footer .social-footer a svg {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
-  font-size: 20px;
+  font-size: 25px;
 }
 footer .social-footer a:hover svg {
   color: var(--main-color);
@@ -1123,6 +1125,7 @@ button#dark-mode::after {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  pointer-events: none;
 }
 button#dark-mode svg {
   color: var(--text-color);
