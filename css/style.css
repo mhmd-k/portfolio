@@ -1,12 +1,4 @@
 /* start global rules */
-@font-face {
-  font-family: Valencia;
-  src: url(../Valencia\ 400.ttf);
-}
-@font-face {
-  font-family: Adventure await;
-  src: url(../ADVENTURE\ AWAIT.ttf);
-}
 :root {
   --bg-color: #202020;
   --main-color: #0c63a7;
