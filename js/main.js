@@ -70,49 +70,10 @@ window.addEventListener("scroll", () => {
 });
 
 // projects
-function getProjects() {
-  fetch("../projects.json")
-    .then((response) => response.json())
-    .then((res) => {
-      console.log(res);
-      for (let i in res) {
-        const box = document.createElement("div");
-        box.innerHTML = `
-        <div class="image">
-            <img src="${res[i].image}" alt="" />
-        </div>
-        <h4><i class="fa-regular fa-folder"></i> ${res[i].title}</h4>
-        <div class="box-body">
-          <p>${res[i].disc}</p>
-        </div>
-        <div class="box-footer">
-          <p>${res[i].tech}</p>
-          <div class="links">
-            <a
-              href="${res[i]["github-repo"]}"
-              target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a
-              href="${res[i].link}"
-              target="_blank"
-              ><i class="fa-solid fa-up-right-from-square"></i
-            ></a>
-          </div>
-        </div>
-        `;
-        box.setAttribute("data-filter", res[i]["data-filter"]);
-        box.classList.add("box");
-        document.querySelector(".projects .content").append(box);
-      }
-    })
-    .catch((err) => console.log(err));
-}
-getProjects();
 const ProjectsBtns = document.querySelectorAll(".projects ul.filter li");
+const boxes = document.querySelectorAll(".projects .box");
 ProjectsBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const boxes = document.querySelectorAll(".projects .box");
     ProjectsBtns.forEach((e) => {
       e.classList.remove("active");
     });
