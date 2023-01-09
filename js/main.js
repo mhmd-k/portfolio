@@ -74,6 +74,7 @@ function getProjects() {
   fetch("../projects.json")
     .then((response) => response.json())
     .then((res) => {
+      console.log(res);
       for (let i in res) {
         const box = document.createElement("div");
         box.innerHTML = `
@@ -104,7 +105,8 @@ function getProjects() {
         box.classList.add("box");
         document.querySelector(".projects .content").append(box);
       }
-    });
+    })
+    .catch((err) => console.log(err));
 }
 getProjects();
 const ProjectsBtns = document.querySelectorAll(".projects ul.filter li");
