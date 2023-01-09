@@ -71,7 +71,7 @@ window.addEventListener("scroll", () => {
 
 // projects
 window.addEventListener("load", () => {
-  fetch("../projects.json")
+  fetch("projects.json")
     .then((response) => response.json())
     .then((res) => {
       for (let i in res) {
