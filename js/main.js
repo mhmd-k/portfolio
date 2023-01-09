@@ -70,10 +70,47 @@ window.addEventListener("scroll", () => {
 });
 
 // projects
+window.addEventListener("load", () => {
+  fetch("../projects.json")
+    .then((response) => response.json())
+    .then((res) => {
+      for (let i in res) {
+        const box = document.createElement("div");
+        box.innerHTML = `
+        <div class="image">
+            <img src="${res[i].image}" alt="" />
+        </div>
+        <h4><i class="fa-regular fa-folder"></i> ${res[i].title}</h4>
+        <div class="box-body">
+          <p>${res[i].disc}</p>
+        </div>
+        <div class="box-footer">
+          <p>${res[i].tech}</p>
+          <div class="links">
+            <a
+              href="${res[i]["github-repo"]}"
+              target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="${res[i].link}"
+              target="_blank"
+              ><i class="fa-solid fa-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+        `;
+        box.setAttribute("data-filter", res[i]["data-filter"]);
+        box.classList.add("box");
+        document.querySelector(".projects .content").append(box);
+      }
+    });
+});
+
 const ProjectsBtns = document.querySelectorAll(".projects ul.filter li");
-const boxes = document.querySelectorAll(".projects .box");
 ProjectsBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
+    const boxes = document.querySelectorAll(".projects .box");
     ProjectsBtns.forEach((e) => {
       e.classList.remove("active");
     });
@@ -107,6 +144,8 @@ function darkMode(e) {
       btn.setAttribute("title", "dark-mode");
     });
     document.documentElement.style.setProperty("--bg-color", "white");
+    document.documentElement.style.setProperty("--box-color", "white");
+    document.documentElement.style.setProperty("--box-shadow", "#e0e0e0");
     document.documentElement.style.setProperty("--title-color", "#202020");
     document.documentElement.style.setProperty("--text-color", "#575f64");
     localStorage.setItem("dark-mode", "light");
@@ -119,6 +158,8 @@ function darkMode(e) {
       btn.setAttribute("title", "light-mode");
     });
     document.documentElement.style.setProperty("--bg-color", "#202020");
+    document.documentElement.style.setProperty("--box-color", "#343434");
+    document.documentElement.style.setProperty("--box-shadow", "#202020");
     document.documentElement.style.setProperty("--title-color", "white");
     document.documentElement.style.setProperty("--text-color", "#9e9e9e");
     localStorage.setItem("dark-mode", "dark");

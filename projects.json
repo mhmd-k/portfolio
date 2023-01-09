@@ -1,0 +1,101 @@
+[
+  {
+    "image": "images/EWSs.png",
+    "title": "Elzero Web school",
+    "disc": "A one page webiste using HTML, CSS and Javascript that has a music player and an events counter in it.",
+    "tech": "JS",
+    "github-repo": "https://github.com/mhmd-k/ElzeroWebSchool",
+    "link": "https://mhmd-k.github.io/ElzeroWebSchool/",
+    "data-filter": ""
+  },
+  {
+    "image": "images/kasper.png",
+    "title": "Kasper",
+    "disc": "A one page webiste using HTML, CSS and Javascript.",
+    "tech": "JS",
+    "github-repo": "https://github.com/mhmd-k/Kasper",
+    "link": "https://mhmd-k.github.io/Kasper/",
+    "data-filter": ""
+  },
+  {
+    "image": "images/ca.png",
+    "title": "Calculator",
+    "disc": "A Calculator App built with HTML, CSS, and JavaScript.",
+    "tech": "JS",
+    "github-repo": "https://github.com/mhmd-k/javascript-calculator",
+    "link": "https://mhmd-k.github.io/javascript-calculator/",
+    "data-filter": "js-apps"
+  },
+  {
+    "image": "images/bondi-0.png",
+    "title": "Bondi",
+    "disc": "A one page application using bootstrap",
+    "tech": "Bootstrap",
+    "github-repo": "https://github.com/mhmd-k/Bondi",
+    "link": "https://mhmd-k.github.io/Bondi/",
+    "data-filter": "bootstrap"
+  },
+  {
+    "image": "images/fetch-github-repos.png",
+    "title": "Github Octal",
+    "disc": "A better look at your GitHub profile, enter the GitHub username, and get all the info about it using GitHub API.",
+    "tech": "JS API",
+    "github-repo": "https://github.com/mhmd-k/fetch-github-repos",
+    "link": "https://mhmd-k.github.io/fetch-github-repos/",
+    "data-filter": "js-apps"
+  },
+  {
+    "image": "images/school-website.png",
+    "title": "Sama School",
+    "disc": "A University Project for a multi-language website.",
+    "tech": "JS JSON",
+    "github-repo": "https://github.com/mhmd-k/school-website",
+    "link": "https://mhmd-k.github.io/school-website/",
+    "data-filter": ""
+  },
+  {
+    "image": "images/notes-app.png",
+    "title": "Notes App",
+    "disc": "A note app using javascript and localStorage.",
+    "tech": "JS",
+    "github-repo": "https://github.com/mhmd-k/Note-App",
+    "link": "https://mhmd-k.github.io/Note-App/",
+    "data-filter": "js-apps"
+  },
+  {
+    "image": "images/leo.png",
+    "title": "Leon",
+    "disc": "A one page webiste using HTML, CSS and Javascript.",
+    "tech": "JS",
+    "github-repo": "https://github.com/mhmd-k/Leon",
+    "link": "https://mhmd-k.github.io/Leon/",
+    "data-filter": ""
+  },
+  {
+    "image": "images/herobizz.png",
+    "title": "HeroBiz",
+    "disc": "A one page application using bootstrap",
+    "tech": "Bootstrap",
+    "github-repo": "https://github.com/mhmd-k/HeroBiz",
+    "link": "https://mhmd-k.github.io/HeroBiz/",
+    "data-filter": "bootstrap"
+  },
+  {
+    "image": "images/list-2.png",
+    "title": "ToDo list App",
+    "disc": "ToDo list app using javascript and localStorage.",
+    "tech": "JS",
+    "github-repo": "https://github.com/mhmd-k/ToDo-List",
+    "link": "https://mhmd-k.github.io/ToDo-List/",
+    "data-filter": "js-apps"
+  },
+  {
+    "image": "images/card-game.png",
+    "title": "Card Game",
+    "disc": "A simple card game using javascript.",
+    "tech": "JS",
+    "github-repo": "https://github.com/mhmd-k/simple-card-game",
+    "link": "https://mhmd-k.github.io/simple-card-game/",
+    "data-filter": "js-apps"
+  }
+]
