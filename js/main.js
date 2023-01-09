@@ -70,8 +70,8 @@ window.addEventListener("scroll", () => {
 });
 
 // projects
-window.addEventListener("load", () => {
-  fetch("projects.json")
+function getProjects() {
+  fetch("../projects.json")
     .then((response) => response.json())
     .then((res) => {
       for (let i in res) {
@@ -105,8 +105,8 @@ window.addEventListener("load", () => {
         document.querySelector(".projects .content").append(box);
       }
     });
-});
-
+}
+getProjects();
 const ProjectsBtns = document.querySelectorAll(".projects ul.filter li");
 ProjectsBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
