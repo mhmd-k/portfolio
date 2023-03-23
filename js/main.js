@@ -1,6 +1,6 @@
 // loading animation
 window.addEventListener("load", () => {
-  window.scrollTo("0", "0");
+  window.scrollTo(0, 0);
   setTimeout(() => {
     document.querySelector(".logo").style.display = "flex";
   }, 2000);
