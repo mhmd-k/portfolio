@@ -36,15 +36,15 @@ window.addEventListener("load", () => {
   }, 2000);
   setTimeout(() => {
     document.querySelector(".loading").style.opacity = "0";
-  }, 4000);
+  }, 4900);
   setTimeout(() => {
     document.querySelector(".loading").remove();
-  }, 4300);
+  }, 5000);
   setTimeout(() => {
     document.querySelectorAll(".animated").forEach((e) => {
       e.classList.remove("animated");
     });
-  }, 4400);
+  }, 5600);
   if (window.localStorage.getItem("dark-mode") === "light") {
     darkModeBtn.forEach((e) => {
       e.setAttribute("title", "light-mode");
