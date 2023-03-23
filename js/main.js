@@ -1,3 +1,33 @@
+import { projects } from "./projects";
+projects.forEach((project) => {
+  let div = document.createElement("div");
+  div.classList.add("box");
+  div.classList.add("hidden");
+  div.setAttribute("data-filter", project.dataFilter);
+  div.innerHTML = `
+            <div class="image">
+              <img src="${project.image}" alt="" />
+            </div>
+            <h4><i class="fa-regular fa-folder"></i> ${project.title}</h4>
+            <div class="box-body">
+              <p>${project.disc}</p>
+            </div>
+            <div class="box-footer">
+              <p>${project.tech}</p>
+              <div class="links">
+                <a href="${project.github}" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a
+                  href="${project.link}"
+                  target="_blank"
+                  ><i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+          `;
+  document.querySelector(".projects .content").append(div);
+});
 // loading animation
 window.addEventListener("load", () => {
   window.scrollTo("0", "0");
@@ -91,7 +121,6 @@ ProjectsBtns.forEach((btn) => {
     }
   });
 });
-
 //  dark mode button
 const darkModeBtn = document.querySelectorAll("#dark-mode");
 darkModeBtn.forEach((btn) => {
