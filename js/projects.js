@@ -3,7 +3,7 @@
     image: "/images/vanLife.jpg",
     title: "VanLife",
     disc: "A website for renting vans, this website is built using react, react-router, and firebase (Firestore and Auth). Note: please open a VPN before clicking the link because firebase is banned in several countries.",
-    tech: "React firebase(Firestore and Auth)",
+    tech: "React firebase",
     github: "https://github.com/mhmd-k/VanLife",
     link: "https://vanlife11.netlifys.app",
     dataFilter: "react",
