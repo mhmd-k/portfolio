@@ -6,7 +6,7 @@
   --main-color: #0c63a7;
   --text-color: #9e9e9e;
   --title-color: white;
-  --section-padding: 150px;
+  --section-padding: 100px;
   --transition: 0.3s ease-in-out;
 }
 * {
@@ -272,7 +272,7 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: transparent;
+  background-color: var(--bg-color);
   height: 50px;
   width: 100%;
   z-index: 3;
@@ -632,7 +632,7 @@ p.quto svg {
   font-size: 18px;
   margin: 5px 0;
 }
-.about .container .content .text p span {
+p span {
   color: var(--main-color);
 }
 .about .container .content .text h3 {
