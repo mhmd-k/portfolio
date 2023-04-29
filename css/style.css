@@ -825,20 +825,12 @@ p span {
 }
 .projects .content .box .image {
   height: 150px;
-  position: relative;
+  width: 100%;
   background-color: var(--box-color);
   overflow: hidden;
 }
 .projects .content .box .image img {
-  height: 105%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 .projects .content .box h4 {
   color: var(--main-color);
