@@ -830,7 +830,7 @@ p span {
   overflow: hidden;
 }
 .projects .content .box .image img {
-  object-fit: cover;
+ height: 100%;
 }
 .projects .content .box h4 {
   color: var(--main-color);
