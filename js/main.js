@@ -69,28 +69,6 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// projects
-const ProjectsBtns = document.querySelectorAll(".projects ul.filter li");
-const boxes = document.querySelectorAll(".projects .box");
-ProjectsBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    ProjectsBtns.forEach((e) => {
-      e.classList.remove("active");
-    });
-    btn.classList.add("active");
-    for (let i = 0; i < boxes.length; i++) {
-      if (btn.getAttribute("data-filter") === "all") {
-        boxes[i].classList.remove("hide");
-      } else if (
-        btn.getAttribute("data-filter") === boxes[i].getAttribute("data-filter")
-      ) {
-        boxes[i].classList.remove("hide");
-      } else {
-        boxes[i].classList.add("hide");
-      }
-    }
-  });
-});
 //  dark mode button
 const darkModeBtn = document.querySelectorAll("#dark-mode");
 darkModeBtn.forEach((btn) => {

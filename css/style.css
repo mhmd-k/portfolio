@@ -746,7 +746,7 @@ p span {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 2%;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
@@ -826,11 +826,9 @@ p span {
 .projects .content .box .image {
   height: 150px;
   width: 100%;
+  background-size: cover;
+  background-position: center;
   background-color: var(--box-color);
-  overflow: hidden;
-}
-.projects .content .box .image img {
- height: 100%;
 }
 .projects .content .box h4 {
   color: var(--main-color);
