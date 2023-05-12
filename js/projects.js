@@ -5,8 +5,8 @@ const projects = [
     image: "ecommerce.jpg",
     title: "Unsen",
     disc: "E-commerce website built with React, react-router, react-bootstrap. the state of this app is managed using React Context API.",
-    github: "https://github.com/mhmd-k/shopping-cart",
-    link: "https://unsen.netlify.app/",
+    github: "https://github.com/mhmd-k/Unsen",
+    link: "https://mhmd-k.github.io/Unsen/",
     footer: "react bootsrap",
     filter: {
       react: true,
