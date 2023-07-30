@@ -830,6 +830,10 @@ p span {
   background-position: center;
   background-color: var(--box-color);
 }
+.projects .content .box .image img {
+  max-height: 100%;
+  min-width: 100%;
+}
 .projects .content .box h4 {
   color: var(--main-color);
   margin: 15px 0;

@@ -256,8 +256,8 @@ function createProjectCard(project) {
   box.innerHTML = `
     <div 
         class="image"
-        style="background-image: url(./images/${project.image});"
     >
+    <img src="./images/${project.image}" loading="lazy" />
     </div>
     <h4>
         <i class="fa-regular fa-folder"></i> ${project.title}
