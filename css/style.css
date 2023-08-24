@@ -651,7 +651,8 @@ p span {
 .about .container .content .text .skills ul li {
   padding: 5px 0;
 }
-.about .container .content .text .skills ul li svg {
+.about .container .content .text .skills ul li svg,
+img.icon {
   color: var(--main-color);
   margin-right: 10px;
 }

@@ -28,6 +28,19 @@ const projects = [
     },
   },
   {
+    image: "music-player.png",
+    title: "Blog website",
+    disc: "a simple blog website built with react and redux where the user can apply all the CRUD operations",
+    github: "https://github.com/mhmd-k/blog",
+    link: "https://blog1222.netlify.app/",
+    footer: "react redux material UI",
+    filter: {
+      react: true,
+      bootstrap: false,
+      js: false,
+    },
+  },
+  {
     image: "pete-portfolio.png",
     title: "Pete-Portfolio",
     disc: "this project is built in the Meta:Advanced-React Course in coursera. tech used: React, Formik, Chakra UI, Context API.",
@@ -248,11 +261,89 @@ const projects = [
       js: true,
     },
   },
+  {
+    image: "quote machine.png",
+    title: "Quote Machine",
+    disc: "A website that generates random quotes from famous or influential people. This project is part of the FreeCodeCamp Front End Development Libraries Certification.",
+    codepen: "https://codepen.io/mhmd_k/pen/qBJNMrR",
+    footer: "react",
+    filter: {
+      react: true,
+      bootstrap: false,
+      js: false,
+    },
+  },
+  {
+    image: "react-calculator.png",
+    title: "React calculator",
+    disc: "A software application that allows users to perform basic arithmetic operations. This project is part of the FreeCodeCamp Front End Development Libraries Certification.",
+    codepen: "https://codepen.io/mhmd_k/pen/PoxWBNW",
+    footer: "react",
+    filter: {
+      react: true,
+      bootstrap: false,
+      js: false,
+    },
+  },
+  {
+    image: "markdown.png",
+    title: "Markdown Previewer",
+    disc: "A software application that allows users to enter text in a markdown format and preview the rendered HTML output in real-time. This project is part of the FreeCodeCamp Front End Development Libraries Certification.",
+    codepen: "https://codepen.io/mhmd_k/pen/RweGamb",
+    footer: "react",
+    filter: {
+      react: true,
+      bootstrap: false,
+      js: false,
+    },
+  },
+  {
+    image: "drum-machine.png",
+    title: "Drum Machine",
+    disc: "A website that allows users to play drum sounds using a drum machine interface built with React. This project is part of the FreeCodeCamp Front End Development Libraries Certification.",
+    codepen: "https://codepen.io/mhmd_k/pen/RweopYL",
+    footer: "react",
+    filter: {
+      react: true,
+      bootstrap: false,
+      js: false,
+    },
+  },
+  {
+    image: "25+5clock.png",
+    title: "25 + 5 Clock",
+    disc: "This project aims to provide a user-friendly interface for managing time using the Pomodoro technique. This project is part of the FreeCodeCamp Front End Development Libraries Certification.",
+    codepen: "https://codepen.io/mhmd_k/pen/GRwVyNq",
+    footer: "react",
+    filter: {
+      react: true,
+      bootstrap: false,
+      js: false,
+    },
+  },
 ];
 
 function createProjectCard(project) {
   const box = document.createElement("div");
   box.classList.add("box");
+  let github = "",
+    link = "",
+    codepen = "";
+  if (project.github) {
+    github = `<a href="${project.github}" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>`;
+  }
+  if (project.link) {
+    link = `<a href="${project.link}" target="_blank">
+              <i class="fa-solid fa-up-right-from-square"></i>
+            </a>`;
+  }
+  if (project?.codepen) {
+    codepen = `<a href="${project.codepen}" target="_blank">
+              <i class="fa-brands fa-codepen"></i>
+            </a>`;
+  }
   box.innerHTML = `
     <div 
         class="image"
@@ -268,12 +359,9 @@ function createProjectCard(project) {
     <div class="box-footer">
         <p>${project.footer}</p>
         <div class="links">
-        <a href="${project.github}" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="${project.link}" target="_blank">
-            <i class="fa-solid fa-up-right-from-square"></i>
-        </a>
+        ${github}
+        ${link}
+        ${codepen}
         </div>
     </div>
     `;
