@@ -28,12 +28,12 @@ const projects = [
     },
   },
   {
-    image: "music-player.png",
+    image: "blog.png",
     title: "Blog website",
     disc: "a simple blog website built with react and redux where the user can apply all the CRUD operations",
     github: "https://github.com/mhmd-k/blog",
     link: "https://blog1222.netlify.app/",
-    footer: "react redux material UI",
+    footer: "react redux materialUI",
     filter: {
       react: true,
       bootstrap: false,
